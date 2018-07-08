@@ -13,7 +13,7 @@ const sales = [
     total: 4
   },
   {
-    customerId: 3,
+    customerId: 4,
     orderId: 3,
     total: 6
   },
@@ -28,7 +28,7 @@ const sales = [
     total: 3
   },
   {
-    customerId: 3,
+    customerId: 4,
     orderId: 6,
     total: 2
   },
@@ -49,7 +49,7 @@ const customers = [
     name: 'Moe'
   },
   {
-    id: 3,
+    id: 4,
     name: 'Curly'
   }
 ];
@@ -61,7 +61,7 @@ describe('generateCustomerSalesMap', () => {
   it('returns an object', () => {
     expect(typeof(generateCustomerSalesMap(sales, customers))).to.eql('object');
   });
-  it('returns a combined object', () => {
+  it.only('returns a combined object', () => {
     expect(generateCustomerSalesMap(sales, customers)).to.eql({Larry: 6, Moe: 11, Curly: 8});
   });
 
