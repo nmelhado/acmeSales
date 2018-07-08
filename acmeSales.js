@@ -1,4 +1,7 @@
-function generateCustomerSalesMap(salesData, customerData) { //reduce solution
+function generateCustomerSalesMap(salesData, customerData) {
+  // reduce solution - reduce function taken from
+  // ('https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce')
+  // building off of the 'Grouping objects by a property' example
   const customers = customerData.reduce(function(accumulated, obj) {
       let key = obj['id'];
       accumulated[key] = obj['name'];
